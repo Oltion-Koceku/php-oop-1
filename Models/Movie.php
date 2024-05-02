@@ -10,9 +10,8 @@ class Movie{
 
   public $autor;
 
-
   //con il construct do il valore alle variabili
-  function __construct(string $_name, string $_minute, string $_year, string $_autor, array $_genere){
+  function __construct(string $_name, string $_minute, string $_year, Autore $_autor, array $_genere){
   
   $this -> setName($_name);
   $this -> setMinute($_minute);
@@ -37,8 +36,8 @@ class Movie{
     //funzione di compliazione film
 
     public function getFullFilm(){
-      // scritto tutto attaccato
-      $genereDaStampare = implode(", " , $this->genere);
+      // scritto tutto attaccato, Implode invece prende un array di stringhe e le concatena insieme sepatando con un separatore che vuoi tu
+      $genereDaStampare = implode("//// " , $this->genere);
       echo  "$this->name, $this->minute, $this->year, Generi: $genereDaStampare";
     }
 
