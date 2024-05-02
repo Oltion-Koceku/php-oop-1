@@ -1,7 +1,13 @@
 <?php 
+  // importo la mia classe
+ 
+  require_once __DIR__ . '/Model/Movie.php';
+ 
+  // uso la mia classe
 
-  require_once __DIR__ . '/Model/Movie.php'
+  $first_movie = new Movie('The Avenger', '142' . 'minuti', '2012', 'Josh Whedon', ['azione', 'romanzo', 'giallo']);
 
+  var_dump($first_movie)
 ?>
 
 
@@ -14,6 +20,11 @@
   <title>Movie</title>
 </head>
 <body>
-  
+  <h1>Films</h1>
+  <ul>
+    <li>
+      <?php $first_movie->getFullFilm()  ?>
+    </li>
+  </ul>
 </body>
 </html>
